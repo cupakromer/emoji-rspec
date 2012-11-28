@@ -113,9 +113,11 @@ This is the one time that we do not advise you write failing tests first!
 
 Also we advise that you turn on fail fast during these sessions:
 
-    ```ruby
-    RSpec.configure {|c| c.fail_fast = true}
-    ```
+```ruby
+RSpec.configure {|c| c.fail_fast = true}
+```
+
+Now without further delay
 
 > Pass: :coffee:
 
