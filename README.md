@@ -111,6 +111,12 @@ Ever have that late night coding session? Now you can do it in style.
 
 This is the one time that we do not advise you write failing tests first!
 
+Also we advise that you turn on fail fast during these sessions:
+
+    ```ruby
+    RSpec.configure {|c| c.fail_fast = true}
+    ```
+
 > Pass: :coffee:
 
 > Fail: :cocktail:  _(gulp of a mixed drink or a shot)_
