@@ -117,6 +117,8 @@ Also we advise that you turn on fail fast during these sessions:
 RSpec.configure {|c| c.fail_fast = true}
 ```
 
+Or if you prefer the command line persuasion: `--fail-fast`
+
 Now without further delay
 
 > Pass: :coffee:
