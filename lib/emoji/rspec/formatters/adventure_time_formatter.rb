@@ -41,26 +41,19 @@ module Emoji
 
         def example_passed(example)
           super(example)
-          output.print success_color rand_emoji PASS_EMOJI
+          output.print success_color PASS_EMOJI.sample
         end
 
         def example_failed(example)
           super(example)
-          output.print failure_color rand_emoji FAIL_EMOJI
+          output.print failure_color FAIL_EMOJI.sample
         end
 
         def example_pending(example)
           super(example)
-          output.print pending_color rand_emoji PEND_EMOJI
-        end
-
-        private
-
-        def rand_emoji(collection)
-          collection[rand collection.size]
+          output.print pending_color PEND_EMOJI.sample
         end
       end
-
     end
   end
 end
