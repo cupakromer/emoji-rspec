@@ -41,17 +41,17 @@ module Emoji
 
         def example_passed(example)
           super(example)
-          output.print green rand_emoji PASS_EMOJI
+          output.print success_color rand_emoji PASS_EMOJI
         end
 
         def example_failed(example)
           super(example)
-          output.print red rand_emoji FAIL_EMOJI
+          output.print failure_color rand_emoji FAIL_EMOJI
         end
 
         def example_pending(example)
           super(example)
-          output.print yellow rand_emoji PEND_EMOJI
+          output.print pending_color rand_emoji PEND_EMOJI
         end
 
         private
