@@ -1,10 +1,9 @@
-require 'rspec/core/formatters/base_text_formatter'
+require_relative 'base'
 
 module Emoji
   module RSpec
     module Formatters
-
-      class AdventureTimeFormatter < ::RSpec::Core::Formatters::BaseTextFormatter
+      class AdventureTimeFormatter < Base
         PASS_EMOJI = [
           "\u{1f496} ",
           "\u{1f31f} ",
@@ -39,19 +38,14 @@ module Emoji
           "\u{1f526} ",
         ]
 
-        def example_passed(example)
-          super(example)
-          output.print success_color PASS_EMOJI.sample
+        def passed_display
+          PASS_EMOJI.sample
         end
-
-        def example_failed(example)
-          super(example)
-          output.print failure_color FAIL_EMOJI.sample
+        def failed_display
+          FAIL_EMOJI.sample
         end
-
-        def example_pending(example)
-          super(example)
-          output.print pending_color PEND_EMOJI.sample
+        def pending_display
+          PEND_EMOJI.sample
         end
       end
     end
