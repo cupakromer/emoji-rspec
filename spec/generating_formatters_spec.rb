@@ -12,13 +12,18 @@ class Foo
   end
 end
 
-EmojiTestLove::RSpecFormatter("Foo")
+EmojiTestLove::RSpecFormatter(Foo)
+EmojiTestLove::RSpecFormatter(Foo, "OtherName")
 
 describe "Generating a formatter" do
   let(:formatter) { EmojiTestLove::FooFormatter.new(nil) }
   let(:provider) { Foo.new }
   it "creates a subclass of RSpecFormatter" do
     formatter.is_a?(::RSpec::Core::Formatters::BaseTextFormatter).should be_true
+  end
+
+  it "supports passing an alternate name" do
+    EmojiTestLove::OtherNameFormatter.new(nil).is_a?(::RSpec::Core::Formatters::BaseTextFormatter).should be_true
   end
 
   it "delegates example_passed to the passed_char to Foo" do

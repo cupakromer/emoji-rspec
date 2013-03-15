@@ -4,9 +4,10 @@ module EmojiTestLove
     class << self
       attr_reader :char_provider
       def char_provider=(provider)
-        @char_provider = provider.new
+        @char_provider = provider
       end
     end
+
     def char_provider
       self.class.char_provider
     end
@@ -23,10 +24,10 @@ module EmojiTestLove
       self.char_provider.pending_char
     end
   end
-  def self.RSpecFormatter(name)
-    formatter_name = "%sFormatter"%name
+  def self.RSpecFormatter(char_provider, formatter_name = char_provider.name)
+    formatter_class_name = "%sFormatter"%formatter_name
     base = Class.new(RSpecIntegration)
-    base.char_provider = Module.const_get(name)
-    self.const_set(formatter_name, base)
+    base.char_provider = char_provider.new
+    self.const_set(formatter_class_name, base)
   end
 end
