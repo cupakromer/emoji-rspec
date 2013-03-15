@@ -11,17 +11,21 @@ module EmojiTestLove
     def display_provider
       self.class.display_provider
     end
+    def print(display)
+      output.print display
+    end
+
     def example_passed(example)
       super(example)
-      output.print self.display_provider.passed_display
+      self.print self.display_provider.passed_display
     end
     def example_failed(example)
       super(example)
-      output.print self.display_provider.failed_display
+      self.print self.display_provider.failed_display
     end
     def example_pending(example)
       super(example)
-      output.print self.display_provider.pending_display
+      self.print self.display_provider.pending_display
     end
   end
   def self.RSpecFormatter(display_provider, formatter_name = display_provider.name)
