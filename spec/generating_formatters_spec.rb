@@ -12,8 +12,8 @@ class Foo
   end
 end
 
-EmojiTestLove::RSpecFormatter(Foo)
-EmojiTestLove::RSpecFormatter(Foo, "OtherName")
+EmojiTestLove::RSpecFormatter(Foo.new)
+EmojiTestLove::RSpecFormatter(Foo.new, "OtherName")
 
 describe "Generating a formatter" do
   let(:output) { stub }

@@ -28,10 +28,10 @@ module EmojiTestLove
       self.print self.display_provider.pending_display
     end
   end
-  def self.RSpecFormatter(display_provider, formatter_name = display_provider.name)
+  def self.RSpecFormatter(display_provider, formatter_name = display_provider.class.name)
     formatter_class_name = "%sFormatter"%formatter_name
     base = Class.new(RSpecIntegration)
-    base.display_provider = display_provider.new
+    base.display_provider = display_provider
     self.const_set(formatter_class_name, base)
   end
 end

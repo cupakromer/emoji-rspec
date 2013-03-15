@@ -13,4 +13,4 @@ module EmojiTestLove
     end
   end
 end
-EmojiTestLove::RSpecFormatter(EmojiTestLove::Smiles, "SmileyFaces")
+EmojiTestLove::RSpecFormatter(EmojiTestLove::Smiles.new, "SmileyFaces")
