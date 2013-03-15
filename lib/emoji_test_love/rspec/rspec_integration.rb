@@ -7,17 +7,20 @@ module EmojiTestLove
         @char_provider = provider.new
       end
     end
+    def char_provider
+      self.class.char_provider
+    end
     def example_passed(example)
       super(example)
-      self.class.char_provider.passed_char
+      self.char_provider.passed_char
     end
     def example_failed(example)
       super(example)
-      self.class.char_provider.failed_char
+      self.char_provider.failed_char
     end
     def example_pending(example)
       super(example)
-      self.class.char_provider.pending_char
+      self.char_provider.pending_char
     end
   end
   def self.RSpecFormatter(name)
