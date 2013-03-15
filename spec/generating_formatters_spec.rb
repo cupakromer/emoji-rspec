@@ -1,13 +1,13 @@
 require 'emoji_test_love/rspec'
 
 class Foo
-  def passed_char
+  def passed_display
     "."
   end
-  def failed_char
+  def failed_display
     "F"
   end
-  def pending_char
+  def pending_display
     "P"
   end
 end
@@ -16,7 +16,8 @@ EmojiTestLove::RSpecFormatter(Foo)
 EmojiTestLove::RSpecFormatter(Foo, "OtherName")
 
 describe "Generating a formatter" do
-  let(:formatter) { EmojiTestLove::FooFormatter.new(nil) }
+  let(:output) { stub }
+  let(:formatter) { EmojiTestLove::FooFormatter.new(output) }
   let(:provider) { Foo.new }
   it "creates a subclass of RSpecFormatter" do
     formatter.is_a?(::RSpec::Core::Formatters::BaseTextFormatter).should be_true
@@ -26,15 +27,18 @@ describe "Generating a formatter" do
     EmojiTestLove::OtherNameFormatter.new(nil).is_a?(::RSpec::Core::Formatters::BaseTextFormatter).should be_true
   end
 
-  it "delegates example_passed to the passed_char to Foo" do
-    formatter.example_passed(example).should == provider.passed_char
+  it "delegates example_passed to the passed_display to Foo" do
+    output.should_receive(:print).with(provider.passed_display)
+    formatter.example_passed(example)
   end
 
-  it "delegates example_failed to the failed_char to Foo" do
-    formatter.example_failed(example).should == provider.failed_char
+  it "delegates example_failed to the failed_display to Foo" do
+    output.should_receive(:print).with(provider.failed_display)
+    formatter.example_failed(example)
   end
 
-  it "delegates example_pending to the pending_char to Foo" do
-    formatter.example_pending(example).should == provider.pending_char
+  it "delegates example_pending to the pending_display to Foo" do
+    output.should_receive(:print).with(provider.pending_display)
+    formatter.example_pending(example)
   end
 end
