@@ -1,4 +1,4 @@
-require 'emoji_test_love/rspec'
+require 'emoji_test_love/rspec/rspec_integration'
 
 class Foo
   def passed_display
