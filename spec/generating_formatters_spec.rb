@@ -27,6 +27,8 @@ describe "Generating a formatter" do
     EmojiTestLove::OtherNameFormatter.new(nil).is_a?(::RSpec::Core::Formatters::BaseTextFormatter).should be_true
   end
 
+  it "supports a namespaced class"
+
   it "delegates example_passed to the passed_display to Foo" do
     output.should_receive(:print).with(provider.passed_display)
     formatter.example_passed(example)
