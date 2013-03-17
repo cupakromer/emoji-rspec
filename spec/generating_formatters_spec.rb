@@ -10,6 +10,9 @@ class Foo
   def pending_display
     "P"
   end
+  def names
+    'foo'
+  end
 end
 
 EmojiTestLove::RSpecFormatter(Foo.new)
@@ -25,9 +28,19 @@ describe "Generating a formatter" do
     expect(formatter).to be_a(::RSpec::Core::Formatters::BaseTextFormatter)
   end
 
+  it "is registered with RSpecIntegration" do
+    expect(::EmojiTestLove::RSpecIntegration.known_formatters)
+      .to include ::EmojiTestLove::FooFormatter
+  end
+
   it "supports passing an alternate name" do
     expect(EmojiTestLove::OtherNameFormatter.new(nil))
       .to be_a(::RSpec::Core::Formatters::BaseTextFormatter)
+  end
+
+  it "registers the alternate name with RSpecIntegration" do
+    expect(::EmojiTestLove::RSpecIntegration.known_formatters)
+      .to include ::EmojiTestLove::OtherNameFormatter
   end
 
   it "supports a namespaced class"
@@ -45,6 +58,17 @@ describe "Generating a formatter" do
   it "delegates example_pending to the pending_display of Foo" do
     output.should_receive(:print).with(provider.pending_display)
     formatter.example_pending(example)
+  end
+
+  it "includes the class name in the custom command line names list" do
+    expect(::EmojiTestLove::FooFormatter.names)
+      .to match_array ['foo', 'EmojiTestLove::FooFormatter']
+  end
+
+  it "delegates to the Foo instance for the custom command line names" do
+    ::EmojiTestLove::FooFormatter.should_receive(:names)
+
+    ::EmojiTestLove::RSpecIntegration.known_formatters.each(&:names)
   end
 
 end

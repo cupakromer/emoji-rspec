@@ -2,15 +2,26 @@ require 'rspec/core/formatters/base_text_formatter'
 module EmojiTestLove
   class RSpecIntegration < ::RSpec::Core::Formatters::BaseTextFormatter
     class << self
-      attr_reader :display_provider
+      attr_reader :display_provider, :known_formatters
+
       def display_provider=(provider)
         @display_provider = provider
+      end
+
+      def inherited(subclass)
+        @known_formatters ||= []
+        @known_formatters << subclass
+      end
+
+      def names
+        Array(display_provider.names) << name
       end
     end
 
     def display_provider
       self.class.display_provider
     end
+
     def print(display)
       output.print display
     end
