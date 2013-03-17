@@ -1,3 +1,6 @@
 --color
 --order rand
--r emoji-rspec
+--format <%= ENV['FORMAT'] || :doc %>
+<% if ENV['TAG'] %>
+--tag <%= ENV['TAG'] %>
+<% end %>
