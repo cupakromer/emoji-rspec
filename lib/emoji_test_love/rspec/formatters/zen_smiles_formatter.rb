@@ -1,3 +1,5 @@
+require 'emoji_test_love/rspec/rspec_integration'
+
 module EmojiTestLove
   class ZenSmiles
     def passed_display
@@ -10,6 +12,10 @@ module EmojiTestLove
 
     def pending_display
       "\u{1f614} "
+    end
+
+    def names
+      ['zen', 'zen_smiles', 'zensmiles']
     end
   end
 end

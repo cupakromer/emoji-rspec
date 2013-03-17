@@ -1,3 +1,5 @@
+require 'emoji_test_love/rspec/rspec_integration'
+
 module EmojiTestLove
   class AdventureTime
     PASS_EMOJI = [
@@ -37,11 +39,17 @@ module EmojiTestLove
     def passed_display
       PASS_EMOJI.sample
     end
+
     def failed_display
       FAIL_EMOJI.sample
     end
+
     def pending_display
       PEND_EMOJI.sample
+    end
+
+    def names
+      ['adventure', 'adventure_time', 'adventuretime']
     end
   end
 end

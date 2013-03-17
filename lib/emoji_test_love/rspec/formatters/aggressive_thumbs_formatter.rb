@@ -1,3 +1,5 @@
+require 'emoji_test_love/rspec/rspec_integration'
+
 module EmojiTestLove
   class AggressiveThumbs
     def passed_display
@@ -10,6 +12,10 @@ module EmojiTestLove
 
     def pending_display
       "\u{270a} "
+    end
+
+    def names
+      ['aggressive_thumbs', 'aggressivethumbs']
     end
   end
 end
