@@ -1,6 +1,6 @@
 require 'emoji_test_love/rspec/rspec_integration'
 
-class Foo
+module TestFormatter
   def passed_display
     "."
   end
@@ -15,8 +15,21 @@ class Foo
   end
 end
 
+module Bar
+  module Baz
+    class Qux
+      include TestFormatter
+    end
+  end
+end
+
+class Foo
+  include TestFormatter
+end
+
 EmojiTestLove::RSpecFormatter(Foo.new)
 EmojiTestLove::RSpecFormatter(Foo.new, "OtherName")
+EmojiTestLove::RSpecFormatter(::Bar::Baz::Qux.new)
 
 describe "Generating a formatter" do
 
@@ -43,7 +56,15 @@ describe "Generating a formatter" do
       .to include ::EmojiTestLove::OtherNameFormatter
   end
 
-  it "supports a namespaced class"
+  it "supports a namespaced class" do
+    expect(EmojiTestLove::Bar::Baz::QuxFormatter.new(nil))
+      .to be_a(::RSpec::Core::Formatters::BaseTextFormatter)
+  end
+
+  it "registers the namespaced class with RSpecIntegration" do
+    expect(::EmojiTestLove::RSpecIntegration.known_formatters)
+      .to include ::EmojiTestLove::Bar::Baz::QuxFormatter
+  end
 
   it "delegates example_passed to the passed_display of Foo" do
     output.should_receive(:print).with(provider.passed_display)

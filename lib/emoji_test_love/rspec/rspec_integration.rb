@@ -40,9 +40,30 @@ module EmojiTestLove
     end
   end
   def self.RSpecFormatter(display_provider, formatter_name = display_provider.class.name)
-    formatter_class_name = "%sFormatter"%formatter_name
-    base = Class.new(RSpecIntegration)
-    base.display_provider = display_provider
-    self.const_set(formatter_class_name, base)
+    base                       = new_formatter display_provider
+    formatter_name, namespaces = *split_by_namespace(formatter_name)
+    scope                      = ensure_namespace_exists namespaces
+    formatter_class_name       = "%sFormatter"%formatter_name
+
+    scope.const_set(formatter_class_name, base)
+  end
+
+  private
+
+  def self.split_by_namespace(formatter_name)
+    namespaces = formatter_name.split('::')
+    [namespaces.pop, namespaces]
+  end
+
+  def self.new_formatter(delegator)
+    Class.new(RSpecIntegration).tap{|base| base.display_provider = delegator}
+  end
+
+  def self.ensure_namespace_exists(namespaces)
+    namespaces.inject(self) do |scope, name|
+      scope.const_set(name, Module.new) unless scope.const_defined?(name, false)
+
+      scope.const_get(name, false)
+    end
   end
 end
