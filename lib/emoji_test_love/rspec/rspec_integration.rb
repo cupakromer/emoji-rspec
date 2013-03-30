@@ -1,5 +1,7 @@
 require 'rspec/core/formatters/base_text_formatter'
+
 module EmojiTestLove
+
   class RSpecIntegration < ::RSpec::Core::Formatters::BaseTextFormatter
     class << self
       attr_reader :display_provider, :known_formatters
@@ -30,15 +32,18 @@ module EmojiTestLove
       super(example)
       self.print self.display_provider.passed_display
     end
+
     def example_failed(example)
       super(example)
       self.print self.display_provider.failed_display
     end
+
     def example_pending(example)
       super(example)
       self.print self.display_provider.pending_display
     end
   end
+
   def self.RSpecFormatter(display_provider, formatter_name = display_provider.class.name)
     base                       = new_formatter display_provider
     formatter_name, namespaces = *split_by_namespace(formatter_name)
@@ -66,4 +71,5 @@ module EmojiTestLove
       scope.const_get(name, false)
     end
   end
+
 end
