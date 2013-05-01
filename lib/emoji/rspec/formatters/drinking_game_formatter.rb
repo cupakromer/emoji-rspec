@@ -1,4 +1,4 @@
-require 'rspec/core/formatters/base_text_formatter'
+require_relative 'base'
 
 module Emoji
   module RSpec
