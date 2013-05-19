@@ -1,5 +1,6 @@
 require 'rspec/core/configuration'
 require_relative 'rspec/rspec_integration'
+require_relative 'rspec/rspec_formatters'
 
 class RSpec::Core::Configuration
 
