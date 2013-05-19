@@ -30,17 +30,17 @@ module EmojiTestLove
 
     def example_passed(example)
       super(example)
-      self.print display_provider.passed_display
+      self.print success_color display_provider.passed_display
     end
 
     def example_failed(example)
       super(example)
-      self.print display_provider.failed_display
+      self.print failure_color display_provider.failed_display
     end
 
     def example_pending(example)
       super(example)
-      self.print display_provider.pending_display
+      self.print pending_color display_provider.pending_display
     end
   end
 
