@@ -6,6 +6,8 @@ A set of emoji based RSpec formatters for use with test output.
 
 ## Installation
 
+**Note**: Stuck on Ruby 1.8.7? :grimacing: See [0.x version](#0x) end of life note.
+
 Add this line to your application's Gemfile:
 
     group :test do
