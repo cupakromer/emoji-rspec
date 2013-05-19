@@ -9,4 +9,5 @@ EmojiTestLove::RSpecFormatter(EmojiTestLove::DrinkingGameTea.new, "DrinkingGameT
 EmojiTestLove::RSpecFormatter(EmojiTestLove::LifeHearts.new, "LifeHearts")
 EmojiTestLove::RSpecFormatter(EmojiTestLove::Smiles.new, "SmileyFaces")
 EmojiTestLove::RSpecFormatter(EmojiTestLove::Thumbs.new, "Thumbs")
+EmojiTestLove::RSpecFormatter(EmojiTestLove::Waddles.new, "Waddles")
 EmojiTestLove::RSpecFormatter(EmojiTestLove::ZenSmiles.new, "ZenSmiles")

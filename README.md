@@ -184,6 +184,23 @@ This can be used with the following `--format` names:
 * `adventuretime`
 * `EmojiTestLove::AdventureTimeFormatter`
 
+### [Waddles](http://gravityfalls.wikia.com/wiki/Waddles)
+
+![Waddles](http://images3.wikia.nocookie.net/__cb20120929182860/gravityfalls/images/thumb/1/15/Waddles.png/95px-Waddles.png)
+
+> Pass: :pig:
+
+> Fail: :bug:
+
+> Pending: :seedling:
+
+This can be used with the following `--format` names:
+
+* `waddles`
+* `EmojiTestLove::WaddlesFormatter`
+
+[![Waddle's Life](http://i.imgur.com/Ho47uAG.png)](http://youtu.be/0RemaiBFMSY)
+
 ## Bugs, Issues, and Suggestions
 
 Please submit them here https://github.com/cupakromer/emoji-rspec/issues
