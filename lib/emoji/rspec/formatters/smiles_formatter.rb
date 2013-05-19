@@ -1,4 +1,5 @@
 require 'rspec/core/formatters/base_text_formatter'
+require 'emoji/helper'
 
 module Emoji
   module RSpec
@@ -7,17 +8,17 @@ module Emoji
       class SmilesFormatter < ::RSpec::Core::Formatters::BaseTextFormatter
         def example_passed(example)
           super(example)
-          output.print green "\u{1f60a} "
+          output.print success_color "#{Emoji::Helper.utf8_encode('1f60a')} "
         end
 
         def example_failed(example)
           super(example)
-          output.print red "\u{1f621} "
+          output.print failure_color "#{Emoji::Helper.utf8_encode('1f621')} "
         end
 
         def example_pending(example)
           super(example)
-          output.print yellow "\u{1f62c} "
+          output.print pending_color "#{Emoji::Helper.utf8_encode('1f62c')} "
         end
       end
 
