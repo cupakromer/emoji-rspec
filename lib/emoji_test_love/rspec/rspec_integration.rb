@@ -30,17 +30,17 @@ module EmojiTestLove
 
     def example_passed(example)
       super(example)
-      self.print self.display_provider.passed_display
+      self.print display_provider.passed_display
     end
 
     def example_failed(example)
       super(example)
-      self.print self.display_provider.failed_display
+      self.print display_provider.failed_display
     end
 
     def example_pending(example)
       super(example)
-      self.print self.display_provider.pending_display
+      self.print display_provider.pending_display
     end
   end
 
@@ -61,7 +61,7 @@ module EmojiTestLove
   end
 
   def self.new_formatter(delegator)
-    Class.new(RSpecIntegration).tap{|base| base.display_provider = delegator}
+    Class.new(RSpecIntegration).tap{ |base| base.display_provider = delegator }
   end
 
   def self.ensure_namespace_exists(namespaces)

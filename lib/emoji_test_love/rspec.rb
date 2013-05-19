@@ -10,7 +10,7 @@ class RSpec::Core::Configuration
     key = key.to_s.downcase
     formatter = ::EmojiTestLove::RSpecIntegration
                   .known_formatters
-                  .detect{|klass| klass.names.map(&:downcase).include? key }
+                  .detect{ |klass| klass.names.map(&:downcase).include? key }
     formatter || built_in_formatter_without_emoji(key)
   end
 
