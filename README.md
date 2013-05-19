@@ -34,6 +34,21 @@ If not using the `.rspec` file method, you will need to manually include
 
 ## Formatters
 
+### Celebrate
+
+> Pass: :beers:
+
+> Fail: :coffee:
+
+> Pending: :pizza:
+
+This can be used with the following `--format` names:
+
+* `celebrate`
+* `celebration`
+* `cheers`
+* `EmojiTestLove::CelebrateFormatter`
+
 ### Smiles
 
 > Pass: :blush:
