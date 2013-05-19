@@ -45,7 +45,7 @@ If not using the `.rspec` file method, you will need to manually include
 This can be used with the following `--format` names:
 
 * `smiles`
-* `Emoji::RSpec::Formatters::SmilesFormatter`
+* `EmojiTestLove::SmileyFacesFormatter`
 
 ### Life Hearts
 
@@ -61,7 +61,7 @@ This can be used with the following `--format` names:
 * `life`
 * `life_hearts`
 * `lifehearts`
-* `Emoji::RSpec::Formatters::LifeHeartsFormatter`
+* `EmojiTestLove::LifeHeartsFormatter`
 
 ### Thumbs
 
@@ -74,7 +74,7 @@ This can be used with the following `--format` names:
 This can be used with the following `--format` names:
 
 * `thumbs`
-* `Emoji::RSpec::Formatters::ThumbsFormatter`
+* `EmojiTestLove::ThumbsFormatter`
 
 ### Zen Smiles
 
@@ -89,7 +89,7 @@ This can be used with the following `--format` names:
 * `zen`
 * `zen_smiles`
 * `zensmiles`
-* `Emoji::RSpec::Formatters::ZenSmilesFormatter`
+* `EmojiTestLove::ZenSmilesFormatter`
 
 ### Aggressive Thumbs
 
@@ -103,7 +103,7 @@ This can be used with the following `--format` names:
 
 * `aggressive_thumbs`
 * `aggressivethumbs`
-* `Emoji::RSpec::Formatters::AggressiveThumbsFormatter`
+* `EmojiTestLove::AggressiveThumbsFormatter`
 
 ### Drinking Game
 
@@ -114,7 +114,7 @@ This is the one time that we do not advise you write failing tests first!
 Also we advise that you turn on fail fast during these sessions:
 
 ```ruby
-RSpec.configure {|c| c.fail_fast = true}
+RSpec.configure{ |c| c.fail_fast = true }
 ```
 
 Or if you prefer the command line persuasion: `--fail-fast`
@@ -133,7 +133,7 @@ This can be used with the following `--format` names:
 * `drinking`
 * `drinking_game`
 * `drinkingame`
-* `Emoji::RSpec::Formatters::DrinkingGameFormatter`
+* `EmojiTestLove::DrinkingGameFormatter`
 
 If coffee isn't your thing, there is a tea version too.
 
@@ -145,11 +145,11 @@ If coffee isn't your thing, there is a tea version too.
 
 This can be used with the following `--format` names:
 
-* `drinking-tea`
+* `drinking_tea`
 * `drinkingtea`
 * `drinking_game_tea`
 * `drinkinggametea`
-* `Emoji::RSpec::Formatters::DrinkingGameTeaFormatter`
+* `EmojiTestLove::DrinkingGameTeaFormatter`
 
 ### Adventure Time
 
@@ -167,7 +167,7 @@ This can be used with the following `--format` names:
 * `adventure`
 * `adventure_time`
 * `adventuretime`
-* `Emoji::RSpec::Formatters::AdventureTimeFormatter`
+* `EmojiTestLove::AdventureTimeFormatter`
 
 ## Bugs, Issues, and Suggestions
 

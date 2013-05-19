@@ -13,7 +13,7 @@ module EmojiTestLove
     end
 
     def names
-      ['drinking-tea', 'drinking_game_tea', 'drinkingtea', 'drinkinggametea']
+      ['drinking_tea', 'drinking_game_tea', 'drinkingtea', 'drinkinggametea']
     end
   end
 end
