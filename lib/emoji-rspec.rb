@@ -1,3 +1,3 @@
 if defined? RSpec
-  require "emoji/rspec/integration"
+  require "emoji_test_love/rspec"
 end
