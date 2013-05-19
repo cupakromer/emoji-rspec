@@ -58,6 +58,8 @@ This can be used with the following `--format` names:
 
 ### Aggressive Thumbs
 
+_See also [Thumbs](#thumbs)_
+
 > Pass: :ok_hand:
 
 > Fail: :facepunch:
@@ -292,6 +294,8 @@ This can be used with the following `--format` names:
 * `EmojiTestLove::TurtlesFormatter`
 
 ### Thumbs
+
+_See also [Aggressive Thumbs](#aggressive-thumbs)_
 
 > Pass: :thumbsup:
 
