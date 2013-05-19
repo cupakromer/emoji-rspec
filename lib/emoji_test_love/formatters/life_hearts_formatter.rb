@@ -1,5 +1,3 @@
-require 'emoji_test_love/rspec/rspec_integration'
-
 module EmojiTestLove
   class LifeHearts
     def passed_display
@@ -19,4 +17,3 @@ module EmojiTestLove
     end
   end
 end
-EmojiTestLove::RSpecFormatter(EmojiTestLove::LifeHearts.new, "LifeHearts")

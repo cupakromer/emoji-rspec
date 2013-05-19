@@ -1,5 +1,3 @@
-require 'emoji_test_love/rspec/rspec_integration'
-
 module EmojiTestLove
   class AdventureTime
     PASS_EMOJI = [
@@ -53,4 +51,3 @@ module EmojiTestLove
     end
   end
 end
-EmojiTestLove::RSpecFormatter(EmojiTestLove::AdventureTime.new, "AdventureTime")
