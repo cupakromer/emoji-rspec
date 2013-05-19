@@ -4,6 +4,19 @@
 
 A set of emoji based RSpec formatters for use with test output.
 
+## Versions
+
+### 1.x
+
+The current main release. Full support for 2.0.0, with some backwards support
+for 1.9.2 and 1.9.3.
+
+### 0.x
+
+This has reached end of life. Further improvements will only be on the 1.x line.
+Pull Requests will be welcome on this branch, but new formatters will not be
+added. If you submit a PR for this, please maintain 1.8.7 support.
+
 ## Installation
 
 Add this line to your application's Gemfile:
