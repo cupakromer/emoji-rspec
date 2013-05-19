@@ -34,77 +34,25 @@ If not using the `.rspec` file method, you will need to manually include
 
 ## Formatters
 
-### Celebrate
+### [Adventure Time](http://en.wikipedia.org/wiki/Adventure_Time)
 
-> Pass: :beers:
+![Adventure Time with Finn & Jake](http://upload.wikimedia.org/wikipedia/en/thumb/3/37/Adventure_Time_-_Title_card.png/250px-Adventure_Time_-_Title_card.png)
 
-> Fail: :coffee:
+_**WARNING**: This is crazy, but then that's the idea if you've seen the show.
+You take full responsibility for any insanity caused by this formatter._
 
-> Pending: :pizza:
+> Pass: :sparkling_heart: :star: :star2: :dizzy: :sparkles: :princess: :person_with_blond_hair: :dog2: :gift_heart:
 
-This can be used with the following `--format` names:
+> Fail: :imp: :smiling_imp: :anger: :boom: :japanese_ogre: :japanese_goblin: :poop: :dragon_face:
 
-* `celebrate`
-* `celebration`
-* `cheers`
-* `EmojiTestLove::CelebrateFormatter`
-
-### Smiles
-
-> Pass: :blush:
-
-> Fail: :rage:
-
-> Pending: :grimacing:
+> Pending: :alien: :iphone: :pill: :game_die: :school_satchel: :penguin: :flashlight: :space_invader:
 
 This can be used with the following `--format` names:
 
-* `smiles`
-* `EmojiTestLove::SmileyFacesFormatter`
-
-### Life Hearts
-
-> Pass: :green_heart:
-
-> Fail: :broken_heart:
-
-> Pending: :yellow_heart:
-
-This can be used with the following `--format` names:
-
-* `hearts`
-* `life`
-* `life_hearts`
-* `lifehearts`
-* `EmojiTestLove::LifeHeartsFormatter`
-
-### Thumbs
-
-> Pass: :thumbsup:
-
-> Fail: :thumbsdown:
-
-> Pending: :hand:
-
-This can be used with the following `--format` names:
-
-* `thumbs`
-* `EmojiTestLove::ThumbsFormatter`
-
-### Zen Smiles
-
-> Pass: :expressionless:
-
-> Fail: :disappointed:
-
-> Pending: :pensive:
-
-This can be used with the following `--format` names:
-
-* `zen`
-* `zen_smiles`
-* `zensmiles`
-* `EmojiTestLove::ZenSmilesFormatter`
+* `adventure`
+* `adventure_time`
+* `adventuretime`
+* `EmojiTestLove::AdventureTimeFormatter`
 
 ### Aggressive Thumbs
 
@@ -120,7 +68,42 @@ This can be used with the following `--format` names:
 * `aggressivethumbs`
 * `EmojiTestLove::AggressiveThumbsFormatter`
 
+### Books
+
+> Pass: :green_book:
+
+> Fail: :closed_book:
+
+> Pending: :orange_book:
+
+This can be used with the following `--format` names:
+
+* `books`
+* `reading_rainbow`
+* `EmojiTestLove::BooksFormatter`
+
+### Celebrate
+
+Similar to [Kanpai](#kanpai) and [Drinking Game](#drinking-game). Here you get
+to celebrate your hard work when your tests pass. Have a :beer: and cheers with
+friends :beers:.
+
+> Pass: :beers: _(cheers with friends / pair programmer)_
+
+> Fail: :coffee: _(oops maybe too many :beer:, have some coffee)_
+
+> Pending: :pizza: _(still work to do, have some nom noms)_
+
+This can be used with the following `--format` names:
+
+* `celebrate`
+* `celebration`
+* `cheers`
+* `EmojiTestLove::CelebrateFormatter`
+
 ### Drinking Game
+
+_See also [Celebrate](#celebrate) and [Kanpai](#kanpai)_
 
 Ever have that late night coding session? Now you can do it in style.
 
@@ -166,23 +149,158 @@ This can be used with the following `--format` names:
 * `drinkinggametea`
 * `EmojiTestLove::DrinkingGameTeaFormatter`
 
-### Adventure Time
+### Fruit
 
-_**WARNING**: This is crazy, but then that's the idea if you've seen the show.
-You take full responsibility for any insanity caused by this formatter._
+> Pass: :green_apple:
 
-> Pass: :sparkling_heart: :star: :star2: :dizzy: :sparkles: :princess: :person_with_blond_hair: :dog2: :gift_heart:
+> Fail: :tomato:
 
-> Fail: :imp: :smiling_imp: :anger: :boom: :japanese_ogre: :japanese_goblin: :poop: :dragon_face:
-
-> Pending: :alien: :iphone: :pill: :game_die: :school_satchel: :penguin: :flashlight: :space_invader:
+> Pending: :lemon:
 
 This can be used with the following `--format` names:
 
-* `adventure`
-* `adventure_time`
-* `adventuretime`
-* `EmojiTestLove::AdventureTimeFormatter`
+* `apples`
+* `fruit`
+* `EmojiTestLove::FruitFormatter`
+
+### [Kanpai](http://en.wikipedia.org/wiki/Toast_%28honor%29)
+
+Similar to [Celebrate](#celebrate) and [Drinking Game](#drinking-game). Here
+you get to celebrate your hard work when your tests pass. So lift some :sake:
+and [_'Kanpai!'_](http://en.wikipedia.org/wiki/Toast_%28honor%29).
+
+> Pass: :sake: _("Kanpai!" with friends / pair programmer)_
+
+> Fail: :tea: _(oops maybe too much :sake:, have some green tea)_
+
+> Pending: :sushi: _(still work to do, have some nom noms)_
+
+This can be used with the following `--format` names:
+
+* `kanpai`
+* `乾杯`
+* `EmojiTestLove::KanpaiFormatter`
+
+### Life Hearts
+
+> Pass: :green_heart:
+
+> Fail: :broken_heart:
+
+> Pending: :yellow_heart:
+
+This can be used with the following `--format` names:
+
+* `hearts`
+* `life`
+* `life_hearts`
+* `lifehearts`
+* `EmojiTestLove::LifeHeartsFormatter`
+
+### Lucky
+
+> Pass: :four_leaf_clover:
+
+> Fail: :mushroom:
+
+> Pending: :chestnut:
+
+This can be used with the following `--format` names:
+
+* `lucky`
+* `EmojiTestLove::LuckyFormatter`
+
+### [Omkase](http://en.wikipedia.org/wiki/Omakase)
+
+I wish Apple had more emoji to make this one a bit more interesting.
+
+> Pass: :dango:
+
+> Fail: :rice_cracker:
+
+> Pending: :fish_cake:
+
+This can be used with the following `--format` names:
+
+* `omkase`
+* `お任せ`
+* `EmojiTestLove::OmkaseFormatter`
+
+### Smile Dip
+
+> Pass: :lollipop:
+
+> Fail: :ghost:
+
+> Pending: :dolphin: _([aoshima](http://gravityfalls.wikia.com/wiki/Aoshima))_
+>
+> ![Mabel riding Aoshima](http://images1.wikia.nocookie.net/__cb20120719190961/gravityfalls/images/thumb/b/b5/S1e5_mabel_hallucination.png/258px-S1e5_mabel_hallucination.png)
+
+This can be used with the following `--format` names:
+
+* `smile_dip`
+* `smiledip`
+* `fun_dip`
+* `fundip`
+* [`aoshima`](http://gravityfalls.wikia.com/wiki/Aoshima)
+* `EmojiTestLove::SmileDipFormatter`
+
+[![Mabel on Smile Dip](http://i.imgur.com/QGwpiOv.png)](http://youtu.be/jngqI1la27o)
+
+### Smiles
+
+> Pass: :blush:
+
+> Fail: :rage:
+
+> Pending: :grimacing:
+
+This can be used with the following `--format` names:
+
+* `smiles`
+* `EmojiTestLove::SmileyFacesFormatter`
+
+### Sunshine
+
+> Pass: :sunny:
+
+> Fail: :umbrella:
+
+> Pending: :cloud:
+
+This can be used with the following `--format` names:
+
+* `sunshine`
+* `sunny`
+* `EmojiTestLove::SunshineFormatter`
+
+### Turtles
+
+> Pass: :turtle:
+
+> Fail: :beetle:
+
+> Pending: :snail:
+
+This can be used with the following `--format` names:
+
+* `turtles`
+* [`turtles_all_the_way_down`](http://en.wikipedia.org/wiki/Turtles_all_the_way_down)
+* `all_the_way_down`
+* `EmojiTestLove::TurtlesFormatter`
+
+### Thumbs
+
+> Pass: :thumbsup:
+
+> Fail: :thumbsdown:
+
+> Pending: :hand:
+
+This can be used with the following `--format` names:
+
+* `thumbs`
+* `EmojiTestLove::ThumbsFormatter`
 
 ### [Waddles](http://gravityfalls.wikia.com/wiki/Waddles)
 
@@ -200,6 +318,21 @@ This can be used with the following `--format` names:
 * `EmojiTestLove::WaddlesFormatter`
 
 [![Waddle's Life](http://i.imgur.com/Ho47uAG.png)](http://youtu.be/0RemaiBFMSY)
+
+### Zen Smiles
+
+> Pass: :expressionless:
+
+> Fail: :disappointed:
+
+> Pending: :pensive:
+
+This can be used with the following `--format` names:
+
+* `zen`
+* `zen_smiles`
+* `zensmiles`
+* `EmojiTestLove::ZenSmilesFormatter`
 
 ## Bugs, Issues, and Suggestions
 
