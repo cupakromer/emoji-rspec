@@ -1,6 +1,6 @@
 # Emoji-RSpec
 
-[![Build Status](https://secure.travis-ci.org/cupakromer/emoji-rspec.png?branch=master)](http://travis-ci.org/cupakromer/emoji-rspec) [![Dependency Status](https://gemnasium.com/cupakromer/emoji-rspec.png?travis)](https://gemnasium.com/cupakromer/emoji-rspec) [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/cupakromer/emoji-rspec)
+[![Gem Version](https://badge.fury.io/rb/emoji-rspec.png)](http://badge.fury.io/rb/emoji-rspec) [![Build Status](https://secure.travis-ci.org/cupakromer/emoji-rspec.png?branch=master)](http://travis-ci.org/cupakromer/emoji-rspec) [![Dependency Status](https://gemnasium.com/cupakromer/emoji-rspec.png?travis)](https://gemnasium.com/cupakromer/emoji-rspec) [![Code Climate](https://codeclimate.com/github/cupakromer/emoji-rspec.png)](https://codeclimate.com/github/cupakromer/emoji-rspec)
 
 A set of emoji based RSpec formatters for use with test output.
 
