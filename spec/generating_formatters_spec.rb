@@ -33,7 +33,7 @@ EmojiTestLove::RSpecFormatter(::Bar::Baz::Qux.new)
 
 describe "Generating a formatter" do
 
-  let(:output) { stub }
+  let(:output) { double 'output' }
   let(:formatter) { EmojiTestLove::FooFormatter.new(output) }
   let(:provider) { Foo.new }
 
