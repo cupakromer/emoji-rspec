@@ -11,7 +11,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Emoji RSpec Formatters}
   gem.homepage      = "https://github.com/cupakromer/emoji-rspec"
 
-  gem.add_dependency "rspec", '~> 2.10'
+  gem.add_dependency "rspec-core", '>= 2.10'
   gem.add_development_dependency "rspec"
   gem.add_development_dependency "rake"
   gem.add_development_dependency "coveralls"
