@@ -6,7 +6,8 @@ rvm:
   - ruby-head
   - jruby-19mode
   - jruby-head
-  - rbx-19mode
+  - rbx-2.2.1
+  - rbx-2.1.1
   - rbx-head
 env:
   - COVERALLS=true
@@ -15,3 +16,5 @@ matrix:
     - rvm: ruby-head
     - rvm: jruby-head
     - rvm: rbx-head
+    - rvm: rbx-2.1.1
+    - rvm: rbx-2.2.1
