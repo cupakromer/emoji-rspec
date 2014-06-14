@@ -1,3 +1,5 @@
+unless rspec3?
+
 require 'emoji_test_love/rspec/rspec_integration'
 
 module TestFormatter
@@ -139,5 +141,7 @@ describe "Generating a formatter" do
       ::EmojiTestLove::RSpecIntegration.known_formatters.each(&:names)
     end
   end
+
+end
 
 end
