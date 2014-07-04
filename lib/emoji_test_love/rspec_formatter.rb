@@ -17,8 +17,8 @@ module EmojiTestLove
         attr_reader :output
       end
 
-      RSpecFormatter.known_formatters ||= []
-      RSpecFormatter.known_formatters << formatter
+      self.known_formatters ||= []
+      self.known_formatters << formatter
     end
 
     def initialize(output)
