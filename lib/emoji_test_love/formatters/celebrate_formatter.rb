@@ -1,5 +1,11 @@
 module EmojiTestLove
-  class Celebrate
+  class CelebrateFormatter
+    include RSpecFormatter
+
+    def self.names
+      ['celebrate', 'celebration', 'cheers']
+    end
+
     def passed_display
       "\u{1f37b} "
     end
@@ -10,10 +16,6 @@ module EmojiTestLove
 
     def pending_display
       "\u{1f355} "
-    end
-
-    def names
-      ['celebrate', 'celebration', 'cheers']
     end
   end
 end

@@ -1,5 +1,11 @@
 module EmojiTestLove
-  class SmileDip
+  class SmileDipFormatter
+    include RSpecFormatter
+
+    def self.names
+      ['smile_dip', 'smiledip', 'fundip', 'fun_dip', 'aoshima']
+    end
+
     def passed_display
       "\u{1f36d} "
     end
@@ -10,10 +16,6 @@ module EmojiTestLove
 
     def pending_display
       "\u{1f42c} "
-    end
-
-    def names
-      ['smile_dip', 'smiledip', 'fundip', 'fun_dip', 'aoshima']
     end
   end
 end

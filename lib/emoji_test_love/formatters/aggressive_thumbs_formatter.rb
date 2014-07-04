@@ -1,5 +1,11 @@
 module EmojiTestLove
-  class AggressiveThumbs
+  class AggressiveThumbsFormatter
+    include RSpecFormatter
+
+    def self.names
+      ['aggressive_thumbs', 'aggressivethumbs']
+    end
+
     def passed_display
       "\u{1f44c} "
     end
@@ -10,10 +16,6 @@ module EmojiTestLove
 
     def pending_display
       "\u{270a} "
-    end
-
-    def names
-      ['aggressive_thumbs', 'aggressivethumbs']
     end
   end
 end

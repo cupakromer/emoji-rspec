@@ -1,5 +1,11 @@
 module EmojiTestLove
-  class LifeHearts
+  class LifeHeartsFormatter
+    include RSpecFormatter
+
+    def self.names
+      ['hearts', 'life', 'life_hearts', 'lifehearts']
+    end
+
     def passed_display
       "\u{1f49a} "
     end
@@ -10,10 +16,6 @@ module EmojiTestLove
 
     def pending_display
       "\u{1f49b} "
-    end
-
-    def names
-      ['hearts', 'life', 'life_hearts', 'lifehearts']
     end
   end
 end

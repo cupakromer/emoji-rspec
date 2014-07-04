@@ -1,5 +1,11 @@
 module EmojiTestLove
-  class Fruit
+  class FruitFormatter
+    include RSpecFormatter
+
+    def self.names
+      ['apples', 'fruit']
+    end
+
     def passed_display
       "\u{1f34f} "
     end
@@ -10,10 +16,6 @@ module EmojiTestLove
 
     def pending_display
       "\u{1f34b} "
-    end
-
-    def names
-      ['apples', 'fruit']
     end
   end
 end

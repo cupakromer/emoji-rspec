@@ -1,5 +1,11 @@
 module EmojiTestLove
-  class ZenSmiles
+  class ZenSmilesFormatter
+    include RSpecFormatter
+
+    def self.names
+      ['zen', 'zen_smiles', 'zensmiles']
+    end
+
     def passed_display
       "\u{1f610} "
     end
@@ -10,10 +16,6 @@ module EmojiTestLove
 
     def pending_display
       "\u{1f614} "
-    end
-
-    def names
-      ['zen', 'zen_smiles', 'zensmiles']
     end
   end
 end

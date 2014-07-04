@@ -1,5 +1,11 @@
 module EmojiTestLove
-  class Books
+  class BooksFormatter
+    include RSpecFormatter
+
+    def self.names
+      ['books', 'reading_rainbow']
+    end
+
     def passed_display
       "\u{1f4d7} "
     end
@@ -10,10 +16,6 @@ module EmojiTestLove
 
     def pending_display
       "\u{1f4d9} "
-    end
-
-    def names
-      ['books', 'reading_rainbow']
     end
   end
 end

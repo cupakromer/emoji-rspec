@@ -1,7 +1,13 @@
 # encoding: utf-8
 
 module EmojiTestLove
-  class Omkase
+  class OmkaseFormatter
+    include RSpecFormatter
+
+    def self.names
+      ['omkase', 'お任せ']
+    end
+
     def passed_display
       "\u{1f361} "
     end
@@ -12,10 +18,6 @@ module EmojiTestLove
 
     def pending_display
       "\u{1f365} "
-    end
-
-    def names
-      ['omkase', 'お任せ']
     end
   end
 end

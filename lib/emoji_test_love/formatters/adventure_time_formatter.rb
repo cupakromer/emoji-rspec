@@ -1,5 +1,11 @@
 module EmojiTestLove
-  class AdventureTime
+  class AdventureTimeFormatter
+    include RSpecFormatter
+
+    def self.names
+      ['adventure', 'adventure_time', 'adventuretime']
+    end
+
     PASS_EMOJI = [
       "\u{1f496} ",
       "\u{1f31f} ",
@@ -44,10 +50,6 @@ module EmojiTestLove
 
     def pending_display
       PEND_EMOJI.sample
-    end
-
-    def names
-      ['adventure', 'adventure_time', 'adventuretime']
     end
   end
 end
