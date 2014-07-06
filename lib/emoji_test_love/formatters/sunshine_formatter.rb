@@ -1,5 +1,11 @@
 module EmojiTestLove
-  class Sunshine
+  class SunshineFormatter
+    include RSpecFormatter
+
+    def self.names
+      ['sunshine', 'sunny']
+    end
+
     def passed_display
       "\u{2600} "
     end
@@ -10,10 +16,6 @@ module EmojiTestLove
 
     def pending_display
       "\u{2601} "
-    end
-
-    def names
-      ['sunshine', 'sunny']
     end
   end
 end

@@ -1,5 +1,11 @@
 module EmojiTestLove
-  class Turtles
+  class TurtlesFormatter
+    include RSpecFormatter
+
+    def self.names
+      ['turtles', 'all_the_way_down', 'turtles_all_the_way_down']
+    end
+
     def passed_display
       "\u{1f422} "
     end
@@ -10,10 +16,6 @@ module EmojiTestLove
 
     def pending_display
       "\u{1f40c} "
-    end
-
-    def names
-      ['turtles', 'all_the_way_down', 'turtles_all_the_way_down']
     end
   end
 end

@@ -1,7 +1,13 @@
 # encoding: utf-8
 
 module EmojiTestLove
-  class Kanpai
+  class KanpaiFormatter
+    include RSpecFormatter
+
+    def self.names
+      ['kanpai', '乾杯']
+    end
+
     def passed_display
       "\u{1f376} "
     end
@@ -12,10 +18,6 @@ module EmojiTestLove
 
     def pending_display
       "\u{1f363} "
-    end
-
-    def names
-      ['kanpai', '乾杯']
     end
   end
 end

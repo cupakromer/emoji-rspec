@@ -1,5 +1,11 @@
 module EmojiTestLove
-  class Thumbs
+  class ThumbsFormatter
+    include RSpecFormatter
+
+    def self.names
+      ['thumbs']
+    end
+
     def passed_display
       "\u{1f44d} "
     end
@@ -10,10 +16,6 @@ module EmojiTestLove
 
     def pending_display
       "\u{270b} "
-    end
-
-    def names
-      'thumbs'
     end
   end
 end

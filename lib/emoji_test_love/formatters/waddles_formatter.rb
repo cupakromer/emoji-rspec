@@ -1,5 +1,11 @@
 module EmojiTestLove
-  class Waddles
+  class WaddlesFormatter
+    include RSpecFormatter
+
+    def self.names
+      ['waddles']
+    end
+
     def passed_display
       "\u{1f437} "
     end
@@ -10,10 +16,6 @@ module EmojiTestLove
 
     def pending_display
       "\u{1f331} "
-    end
-
-    def names
-      ['waddles']
     end
   end
 end
