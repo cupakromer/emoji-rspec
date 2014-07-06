@@ -12,7 +12,8 @@ module EmojiTestLove
         :start_dump,
         :dump_summary,
         :dump_failures,
-        :dump_pending
+        :dump_pending,
+        :seed
 
       formatter.instance_eval do
         attr_reader :output
@@ -54,6 +55,11 @@ module EmojiTestLove
     def dump_pending(notification)
       return if notification.pending_examples.empty?
       output.puts notification.fully_formatted_pending_examples
+    end
+
+    def seed(notification)
+      return unless notification.seed_used?
+      output.puts notification.fully_formatted
     end
   end
 end
