@@ -12,6 +12,7 @@ shared_examples "an Emoji Test Love Formatter" do
     it { is_expected.to respond_to(:example_passed)  }
     it { is_expected.to respond_to(:example_failed)  }
     it { is_expected.to respond_to(:example_pending) }
+    it { is_expected.to respond_to(:start_dump)      }
     it { is_expected.to respond_to(:dump_summary)    }
     it { is_expected.to respond_to(:dump_failures)   }
     it { is_expected.to respond_to(:dump_pending)    }

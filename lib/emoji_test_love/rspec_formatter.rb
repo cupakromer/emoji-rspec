@@ -9,6 +9,7 @@ module EmojiTestLove
         :example_passed,
         :example_failed,
         :example_pending,
+        :start_dump,
         :dump_summary,
         :dump_failures,
         :dump_pending
@@ -35,6 +36,10 @@ module EmojiTestLove
 
     def example_pending(notification)
       @output << pending_display
+    end
+
+    def start_dump(notification)
+      output.puts
     end
 
     def dump_summary(summary)
